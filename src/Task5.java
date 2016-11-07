@@ -30,6 +30,7 @@ public class Task5 {
         }
         return arr;
 
+
     }
     static int [] ArraySumString (int [][]arr){
         int[] arrI = new int[arr.length];
