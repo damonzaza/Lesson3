@@ -18,7 +18,8 @@ public class Task5 {
         m = in.nextInt();
         System.out.print("Input range N(integer) ");
         n = in.nextInt();
-
+        ArrayPrint2(Array(n,m));
+        ArrayPrint1(ArraySumString(Array(n,m)));
     }
     static int[][] Array (int n, int m){
         int [][] arr = new int[n][m];
@@ -30,13 +31,38 @@ public class Task5 {
         return arr;
     }
     static int [] ArraySumString (int [][]arr){
-        int [] arrI = new int[];
+        int[] arrI = new int[arr.length];
         int Result = 0;
-        for (int i = 0; i < arr[i].length; i++) {
-            for (int j = 0; j < ; j++) {
-                
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+               Result=+arr[i][j];
             }
-            Result=+arr[i][j]                        
+            arrI[i]=Result;
+            Result=0;
         }
+        return arrI;
+    }
+    static void ArrayPrint2 (int[][] arr) {
+        System.out.println("Array is ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j]);
+                if (j < (arr[i].length - 1)) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println("");
+        }
+        System.out.println("");
+    }
+    static void ArrayPrint1 (int[] arr) {
+        System.out.print("Array is ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < (arr.length - 1)) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("");
     }
 }
