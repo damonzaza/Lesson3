@@ -12,14 +12,16 @@ import java.util.Scanner;
 public class Task5 {
     public static void main(String[] args) {
         int m,n = 0;
+        int arr[][];
         System.out.println("Two dimension array convert to one dimension array");
         Scanner in = new Scanner(System.in);
         System.out.print("Input range M(integer) ");
         m = in.nextInt();
         System.out.print("Input range N(integer) ");
         n = in.nextInt();
-        ArrayPrint2(Array(n,m));
-        ArrayPrint1(ArraySumString(Array(n,m)));
+        arr = Array(n,m);
+        ArrayPrint2(arr);
+        ArrayPrint1(ArraySumString(arr));
     }
     static int[][] Array (int n, int m){
         int [][] arr = new int[n][m];
@@ -32,12 +34,12 @@ public class Task5 {
 
 
     }
-    static int [] ArraySumString (int [][]arr){
+    static int[] ArraySumString (int[][] arr){
         int[] arrI = new int[arr.length];
         int Result = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-               Result=+arr[i][j];
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[i].length; j++){
+               Result=Result+arr[i][j];
             }
             arrI[i]=Result;
             Result=0;
